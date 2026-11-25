@@ -1,0 +1,402 @@
+/* Estilos del sitio de Spaceship Ultimate.
+   Los colores salen de la interfaz del juego: fondo azul oscuro,
+   bordes azules y el verde limón de los títulos. */
+
+:root {
+  --fondo: #0b1020;
+  --panel: #121a33;
+  --borde: #4a6fd6;
+  --acento: #d6ff96;
+  --texto: #e6ecff;
+  --texto-suave: #a9b4d6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--fondo);
+}
+
+/* El pie de página queda abajo aunque la página tenga poco contenido */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--fondo);
+  color: var(--texto);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: "Jersey 15", Arial, sans-serif;
+  font-weight: normal;
+  color: var(--acento);
+  line-height: 1.1;
+}
+
+h1 { font-size: 3.2rem; margin: 0 0 10px; }
+h2 { font-size: 2.2rem; margin: 40px 0 12px; }
+h3 { font-size: 1.6rem; margin: 0 0 8px; }
+
+a {
+  color: var(--acento);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ---------- Encabezado y menú ---------- */
+
+header {
+  background-color: var(--panel);
+  border-bottom: 3px solid var(--borde);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.logo {
+  font-family: "Jersey 15", Arial, sans-serif;
+  font-size: 1.8rem;
+  color: var(--acento);
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  padding: 8px 12px;
+  color: var(--texto);
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+nav a:hover {
+  border-color: var(--borde);
+}
+
+/* La página donde está el usuario queda marcada en el menú */
+nav a.activo {
+  color: var(--fondo);
+  background-color: var(--acento);
+}
+
+.boton-menu {
+  display: none;
+  background: none;
+  border: 2px solid var(--borde);
+  color: var(--texto);
+  font-size: 1.4rem;
+  padding: 2px 10px;
+  cursor: pointer;
+}
+
+/* ---------- Secciones ---------- */
+
+main {
+  flex: 1;
+  padding-bottom: 40px;
+}
+
+.portada {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding: 40px 0 10px;
+}
+
+.portada > div {
+  flex: 1;
+}
+
+.lema {
+  font-size: 1.2rem;
+  color: var(--texto-suave);
+}
+
+.boton {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+  padding: 10px 22px;
+  border: 3px solid var(--acento);
+  color: var(--acento);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.boton:hover,
+.boton.principal {
+  background-color: var(--acento);
+  color: var(--fondo);
+}
+
+.boton.principal:hover {
+  background-color: transparent;
+  color: var(--acento);
+}
+
+.marco {
+  border: 3px solid var(--borde);
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.tarjeta {
+  background-color: var(--panel);
+  border: 2px solid var(--borde);
+  padding: 18px;
+}
+
+.tarjeta p {
+  margin: 0;
+}
+
+.nota {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid var(--borde);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--panel);
+  color: var(--acento);
+}
+
+/* ---------- Galería ---------- */
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.galeria figure {
+  margin: 0;
+  background-color: var(--panel);
+  border: 2px solid var(--borde);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.galeria figure:hover {
+  transform: translateY(-4px);
+}
+
+.galeria figcaption {
+  padding: 6px 10px;
+  font-size: 0.9rem;
+}
+
+/* Imagen ampliada al hacer clic en la galería */
+.visor {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 20;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.visor.abierto {
+  display: flex;
+}
+
+.visor img {
+  max-height: 80vh;
+  border: 3px solid var(--borde);
+}
+
+.visor p {
+  margin-top: 10px;
+}
+
+/* ---------- Video y demo ---------- */
+
+.video,
+.demo {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 3px solid var(--borde);
+  background-color: #000;
+}
+
+.pendiente {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--texto-suave);
+}
+
+/* ---------- Proceso (línea de tiempo) ---------- */
+
+.linea {
+  border-left: 3px solid var(--borde);
+  padding-left: 22px;
+}
+
+.paso {
+  position: relative;
+  margin-bottom: 26px;
+}
+
+.paso::before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: 6px;
+  width: 15px;
+  height: 15px;
+  background-color: var(--acento);
+}
+
+.fecha {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.mapa {
+  overflow-x: auto;
+  border: 3px solid var(--borde);
+}
+
+.mapa img {
+  max-width: none;
+  height: 220px;
+}
+
+/* ---------- Equipo ---------- */
+
+.persona {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background-color: var(--panel);
+  border: 2px solid var(--borde);
+  padding: 20px;
+}
+
+.persona img {
+  width: 96px;
+  image-rendering: pixelated;
+}
+
+/* ---------- Pie de página ---------- */
+
+footer {
+  border-top: 3px solid var(--borde);
+  background-color: var(--panel);
+  padding: 16px 0;
+  text-align: center;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+/* Las secciones aparecen suavemente al bajar por la página (ver main.js) */
+.aparecer {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.aparecer.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Celulares y tabletas ---------- */
+
+@media (max-width: 800px) {
+  h1 { font-size: 2.6rem; }
+
+  .portada {
+    flex-direction: column;
+  }
+
+  .tarjetas,
+  .galeria {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .boton-menu {
+    display: block;
+  }
+
+  /* El menú se esconde y se abre con el botón ☰ */
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--panel);
+    border-bottom: 3px solid var(--borde);
+  }
+
+  nav.abierto {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 10px 5%;
+  }
+}
+
+@media (max-width: 500px) {
+  .tarjetas,
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .persona {
+    flex-direction: column;
+    text-align: center;
+  }
+}

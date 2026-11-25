@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cómo se hizo Spaceship Ultimate, de la idea al sitio web.">
+  <title>Proceso | Spaceship Ultimate</title>
+  <link rel="icon" href="img/astronauta.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <div class="contenedor barra">
+      <a class="logo" href="index.html">Spaceship Ultimate</a>
+      <button class="boton-menu" aria-label="Abrir el menú">☰</button>
+      <nav>
+        <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="juego.html">El juego</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="proceso.html" class="activo">Proceso</a></li>
+        <li><a href="equipo.html">Equipo</a></li>
+        <li><a href="jugar.html">Jugar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+
+    <h1>Proceso de desarrollo</h1>
+    <p>El juego se hizo en cuatro etapas a lo largo del curso. Cada una partió de lo que dejó la anterior.</p>
+
+    <section class="linea">
+      <div class="paso aparecer">
+        <h3>1. La idea</h3>
+        <p class="fecha">Tarea 1</p>
+        <p>Un mapa mental con los conceptos de diseño de juegos y la propuesta: género, público, mecánicas,
+          historia y estilo visual. La idea inicial era una nave que recogía combustible entre planetas.</p>
+      </div>
+
+      <div class="paso aparecer">
+        <h3>2. El prototipo y la prueba de usabilidad</h3>
+        <p class="fecha">Tarea 2</p>
+        <p>La idea se volvió un plataformero con un astronauta, hecho en Godot. Se evaluó con cinco heurísticas
+          de Nielsen y con cinco jugadores externos. A todos les gustó, pero las partidas duraban menos de un
+          minuto y cuatro de cinco pidieron más reto.</p>
+      </div>
+
+      <div class="paso aparecer">
+        <h3>3. La demo mejorada</h3>
+        <p class="fecha">Tarea 3</p>
+        <p>Con esos resultados el nivel 1 pasó de 132 a 250 columnas, llegaron los puntos de control, el selector
+          de dificultad, la flecha guía, la confirmación al salir y el nivel 2 con el droide. También se
+          analizaron Celeste y Super Mario Bros. para que el juego fuera difícil sin ser frustrante.</p>
+        <div class="mapa">
+          <img src="img/mapa_nivel_1.png" alt="Mapa completo del nivel 1">
+        </div>
+        <p class="nota">Mapa completo del nivel 1 tomado del juego (desliza hacia los lados para verlo entero).</p>
+      </div>
+
+      <div class="paso aparecer">
+        <h3>4. Este sitio web</h3>
+        <p class="fecha">Tarea 4</p>
+        <p>El sitio se planeó con un mapa mental de UX/UI, un mapa de navegación y wireframes de cada página.
+          Usa los mismos colores y la misma fuente del juego, se adapta al celular y tiene la demo jugable.</p>
+        <img class="marco" src="img/mapa_mental_uxui.png" alt="Mapa mental de conceptos UX/UI aplicados al sitio">
+        <p class="nota">Mapa mental de UX/UI que sirvió de base para diseñar el sitio.</p>
+        <img class="marco" src="img/mapa_sitio.png" alt="Mapa de navegación del sitio">
+        <p class="nota">Mapa de navegación: todas las páginas salen del menú superior.</p>
+        <img class="marco" src="img/wireframes.png" alt="Wireframes de las páginas principales">
+        <p class="nota">Wireframes de las páginas principales en escritorio y celular.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Spaceship Ultimate · Diseño Interactivo (213030) · UNAD · <span id="anio"></span></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

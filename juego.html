@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Historia, mecánicas, público objetivo y controles de Spaceship Ultimate.">
+  <title>El juego | Spaceship Ultimate</title>
+  <link rel="icon" href="img/astronauta.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <div class="contenedor barra">
+      <a class="logo" href="index.html">Spaceship Ultimate</a>
+      <button class="boton-menu" aria-label="Abrir el menú">☰</button>
+      <nav>
+        <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="juego.html" class="activo">El juego</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="proceso.html">Proceso</a></li>
+        <li><a href="equipo.html">Equipo</a></li>
+        <li><a href="jugar.html">Jugar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+
+    <h1>El juego</h1>
+
+    <section>
+      <h2>Historia</h2>
+      <p>Una lluvia de meteoritos dejó el cohete de un astronauta varado en un planeta desconocido y con los
+        tanques vacíos. Para volver a casa tiene que recorrer el planeta, recoger las cápsulas de combustible
+        y llegar al cohete antes de perder sus tres vidas. En el segundo nivel la búsqueda sigue en una base
+        minera abandonada, vigilada por droides.</p>
+    </section>
+
+    <section class="aparecer">
+      <h2>Mecánicas</h2>
+      <ul>
+        <li><strong>Moverse y saltar</strong> entre plataformas, sobre pinchos y caídas al vacío.</li>
+        <li><strong>Recoger combustible:</strong> el HUD muestra cuántas cápsulas faltan y el cohete solo despega con todas.</li>
+        <li><strong>Enemigos:</strong> los alienígenas patrullan y se derrotan saltándoles encima. El droide del nivel 2
+          despierta cuando el jugador se acerca y lanza una descarga.</li>
+        <li><strong>Vidas por golpes:</strong> hay tres vidas y cada una aguanta dos golpes (uno en Difícil).
+          Al perder una vida se vuelve al último punto de control.</li>
+        <li><strong>Puntos de control</strong> antes de los tramos más difíciles.</li>
+        <li><strong>Flecha guía</strong> en el borde de la pantalla que apunta a la cápsula más cercana o al cohete.</li>
+      </ul>
+    </section>
+
+    <section class="aparecer">
+      <h2>Público objetivo</h2>
+      <p>Niños, adolescentes y jóvenes que disfrutan los juegos de plataformas cortos. Las partidas duran pocos
+        minutos y los controles son simples. En la prueba de usabilidad jugaron personas de 11 a 48 años, desde
+        quien nunca había jugado hasta jugadores con experiencia, y por eso se agregaron las tres dificultades.</p>
+    </section>
+
+    <section class="aparecer">
+      <h2>Controles</h2>
+      <table>
+        <tr><th>Acción</th><th>Teclas</th></tr>
+        <tr><td>Moverse</td><td>Flechas izquierda y derecha, o A y D</td></tr>
+        <tr><td>Saltar</td><td>Espacio, W o flecha arriba</td></tr>
+        <tr><td>Pausa</td><td>Esc o P</td></tr>
+        <tr><td>Reiniciar el nivel</td><td>R</td></tr>
+        <tr><td>Derrotar enemigos</td><td>Saltar sobre ellos</td></tr>
+      </table>
+    </section>
+
+    <section class="aparecer">
+      <h2>Ficha técnica</h2>
+      <ul>
+        <li><strong>Género:</strong> plataformas 2D en pixel art.</li>
+        <li><strong>Motor:</strong> Godot 4.3 (GDScript).</li>
+        <li><strong>Plataforma:</strong> computador con Windows o navegador web.</li>
+        <li><strong>Arte y sonido:</strong> packs de uso libre (CC0) de Matt Walkden y Kenney, y la fuente Jersey 15.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Spaceship Ultimate · Diseño Interactivo (213030) · UNAD · <span id="anio"></span></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

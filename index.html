@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Spaceship Ultimate, un plataformero 2D en pixel art hecho en Godot.">
+  <title>Inicio | Spaceship Ultimate</title>
+  <link rel="icon" href="img/astronauta.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <div class="contenedor barra">
+      <a class="logo" href="index.html">Spaceship Ultimate</a>
+      <button class="boton-menu" aria-label="Abrir el menú">☰</button>
+      <nav>
+        <ul>
+        <li><a href="index.html" class="activo">Inicio</a></li>
+        <li><a href="juego.html">El juego</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="proceso.html">Proceso</a></li>
+        <li><a href="equipo.html">Equipo</a></li>
+        <li><a href="jugar.html">Jugar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+
+    <section class="portada">
+      <div>
+        <h1>Spaceship Ultimate</h1>
+        <p class="lema">Un astronauta, un cohete sin combustible y un planeta lleno de alienígenas.</p>
+        <p>Es un plataformero 2D en pixel art hecho con Godot para el curso Diseño Interactivo de la UNAD.
+          Hay que recoger las cápsulas de combustible y llegar al cohete para volver a casa.</p>
+        <a class="boton principal" href="jugar.html">Jugar ahora</a>
+        <a class="boton" href="juego.html">Conocer el juego</a>
+      </div>
+      <div>
+        <img class="marco" src="img/nivel_1.jpg" alt="El astronauta en el nivel 1, con el HUD de vidas, combustible y tiempo">
+      </div>
+    </section>
+
+    <section class="aparecer">
+      <h2>En pocas palabras</h2>
+      <div class="tarjetas">
+        <div class="tarjeta">
+          <h3>2 niveles</h3>
+          <p>El cráter y la base minera, cada uno con sus enemigos y puntos de control.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>3 dificultades</h3>
+          <p>Fácil, Normal y Difícil cambian cuántos enemigos hay y qué tan rápido se mueven.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Se juega en el navegador</h3>
+          <p>La demo corre aquí mismo, sin instalar nada. Solo se necesita teclado.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="aparecer">
+      <h2>¿Qué hay en este sitio?</h2>
+      <p>En <a href="juego.html">El juego</a> está la historia, las mecánicas y a quién va dirigido.
+        En <a href="galeria.html">Galería</a> hay capturas y el video de presentación.
+        En <a href="proceso.html">Proceso</a> cuento cómo se hizo, desde la idea hasta esta versión,
+        y en <a href="jugar.html">Jugar</a> se puede probar o descargar.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Spaceship Ultimate · Diseño Interactivo (213030) · UNAD · <span id="anio"></span></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

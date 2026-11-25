@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demo jugable de Spaceship Ultimate en el navegador y descarga para Windows.">
+  <title>Jugar | Spaceship Ultimate</title>
+  <link rel="icon" href="img/astronauta.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <div class="contenedor barra">
+      <a class="logo" href="index.html">Spaceship Ultimate</a>
+      <button class="boton-menu" aria-label="Abrir el menú">☰</button>
+      <nav>
+        <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="juego.html">El juego</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="proceso.html">Proceso</a></li>
+        <li><a href="equipo.html">Equipo</a></li>
+        <li><a href="jugar.html" class="activo">Jugar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+
+    <h1>Jugar</h1>
+
+    <section>
+      <p>Haz clic dentro del recuadro y pulsa <strong>Enter</strong> para empezar. Se juega con el teclado,
+        así que funciona en computador, no en celular. La primera vez puede tardar unos segundos en cargar.</p>
+      <iframe class="demo" src="demo/index.html" title="Demo jugable de Spaceship Ultimate"></iframe>
+      <p class="nota">Controles: flechas o A/D para moverse, Espacio para saltar, Esc para pausar y R para reiniciar.</p>
+    </section>
+
+    <section class="aparecer">
+      <h2>Descargar para Windows</h2>
+      <p>Si prefieres jugar sin navegador, descarga el ejecutable, descomprímelo y abre
+        <strong>SpaceshipUltimate.exe</strong>. Funciona en Windows 10 u 11 de 64 bits.</p>
+      <!-- Cambia el # por el enlace de Google Drive del .zip -->
+      <a class="boton principal" href="#">Descargar (.zip, 34 MB)</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Spaceship Ultimate · Diseño Interactivo (213030) · UNAD · <span id="anio"></span></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
